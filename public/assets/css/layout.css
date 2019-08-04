@@ -1,0 +1,139 @@
+hr {
+    width: 100%;
+}
+
+.background_header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.toprow {
+    background-color: #6b1d1a;
+    color: #bbbbbb;
+}
+
+.toprow a {
+    color: #0095eb;
+}
+
+.menu_main {
+    background-color: #95231d;
+    color: #bbbbbb;
+}
+
+.btn_red {
+    background-color: #95231d;
+    color: white;
+}
+
+.menu_sticky {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #bbbbbb;
+    position: fixed;
+    top: -125px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 300ms ease;
+}
+
+.menu_sticky.visible{
+    top: 0;
+}
+
+.sep_from_red {
+    background-image: url('/assets/images/sep_red.png');
+    padding-top: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    bottom: -49px;
+}
+
+.sep_to_white {
+    background-image: url('/assets/images/sep_white.png');
+    padding-top: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+}
+
+.sep_grey_top {
+    background-image: url('/assets/images/sep_grey.png');
+    padding-top: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    left: 0;
+}
+
+.sep_from_white {
+    background-image: url('/assets/images/sep_white.png');
+    padding-top: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    transform: rotate3d(0,0,1,180deg);
+    left: 0;
+}
+
+li.nav-item.active {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+div.losange_icon {
+    width: 155px;
+    height: 155px;
+    border-radius: 20px;
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color: white;
+
+    background-position: center;
+    background-size: 120px;
+    background-repeat: no-repeat;
+
+    box-shadow: -1px -1px 4px 4px rgba(0, 0, 0, 0.18);
+}
+
+div.losange_image {
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color: white;
+
+    background-position: center;
+    background-size: 400px;
+    background-repeat: no-repeat;
+
+    box-shadow: -1px -1px 4px 4px rgba(0, 0, 0, 0.18);
+
+}
+
+span.spanBanner {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50px;
+    padding-top: 22px;
+
+    font-weight: 600;
+}

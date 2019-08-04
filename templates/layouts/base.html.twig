@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('assets/css/boostrap.css')}}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('assets/fontawesome/css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/layout.css')}}">
+
+    {% block stylesheets %}
+
+    {% endblock %}
+
+    <title>{% block title %}ACE-SERVICE VITRERIE OUVERTURES SERURERIE!{% endblock %}</title>
+</head>
+<body>
+    <div class="background_header" {% if background is defined %}style="background-image: url({{ background }});"{% endif %}>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark menu_sticky">
+                <a class="navbar-brand " href="{{ path('home') }}"><h1 class="text-white">ACE-SERVICE</h1></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto">
+                        {% include 'layouts/li_menu.html.twig' with {'route_name': 'home', 'menu_name': 'acceuil'} %}
+                        {% include 'layouts/li_menu.html.twig' with {'route_name': 'vitrerie', 'menu_name': 'vitrerie'} %}
+                        {% include 'layouts/li_menu.html.twig' with {'route_name': 'ouvertures', 'menu_name': 'ouvertures'} %}
+                    </ul>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="row toprow">
+                    <div class="col-sm">
+                        <p>ACE-SERVICES vitrerie - ouvertures - serrurerie Tours Métropole <i class="fas fa-phone"></i> <a href="tel:{{ tel | replace({'.': ''}) }}">{{ tel }}</a></p>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative">
+                <div class="menu_main">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand " href="{{ path('home') }}"><h1 class="text-white">ACE-SERVICE</h1></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-md-end" id="navbarsExample08">
+                            <ul class="navbar-nav">
+                                {% include 'layouts/li_menu.html.twig' with {'route_name': 'home', 'menu_name': 'acceuil'} %}
+                                {% include 'layouts/li_menu.html.twig' with {'route_name': 'vitrerie', 'menu_name': 'vitrerie'} %}
+                                {% include 'layouts/li_menu.html.twig' with {'route_name': 'ouvertures', 'menu_name': 'ouvertures'} %}
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="sep_from_red d-none d-md-block"></div>
+            </div>
+            {% block section1 %}{% endblock %}
+        </header>
+    </div>
+
+    <main role="main">
+        {% block section2 %}{% endblock %}
+        {% block section3 %}{% endblock %}
+        {% block section4 %}{% endblock %}
+        {% block section5 %}{% endblock %}
+    </main>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <div>Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="application/javascript">
+
+      let menu_main = document.querySelector('.menu_main');
+      let menu_sticky = $('.menu_sticky');
+      let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio > 0) {
+            menu_sticky.removeClass('visible')
+          } else {
+            menu_sticky.addClass('visible')
+          }
+        });
+      }, {threshold: 0});
+      observer.observe(menu_main);
+
+    </script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html>

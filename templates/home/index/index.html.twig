@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block section1 %}
+    <section class="jumbotron text-center" style="position: relative; background-color: transparent;">
+        {% include 'home/index/sections/1.html.twig' %}
+        <div class="sep_to_white d-none d-md-block"></div>
+    </section>
+{% endblock %}
+
+{% block section2 %}
+    <div class="container-fluid pl-md-5 pr-md-5">
+        {% include 'home/index/sections/2.html.twig' %}
+    </div>
+{% endblock %}
+
+{% block section3 %}
+    <div class="container-fluid" style="background-color: #f4f4f4; position: relative; padding-top: 80px; padding-bottom: 80px;">
+        <div class="sep_from_white d-none d-md-block"></div>
+        {% include 'home/index/sections/3.html.twig' %}
+        <div class="sep_to_white d-none d-md-block"></div>
+    </div>
+{% endblock %}
+
+{% block section4 %}
+    <div class="container-fluid" style="position: relative; height: 500px;">
+        {% include 'home/index/sections/4.html.twig' %}
+    </div>
+{% endblock %}
