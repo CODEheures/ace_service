@@ -16,7 +16,7 @@ class HomeController extends AbstractController
     public function index()
     {
         return $this->render('home/index/index.html.twig', [
-            'background' => '/assets/images/facade.png',
+            'background' => 'assets/images/facade.png',
             'icon1' => 'assets/images/quality.png',
             'icon2' => 'assets/images/fast.png',
             'icon3' => 'assets/images/euro-price-tag.png',
