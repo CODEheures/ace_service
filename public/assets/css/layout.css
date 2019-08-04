@@ -43,7 +43,7 @@ hr {
 }
 
 .sep_from_red {
-    background-image: url('assets/images/sep_red.png');
+    background-image: url('../images/sep_red.png');
     padding-top: 50px;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@ hr {
 }
 
 .sep_to_white {
-    background-image: url('/assets/images/sep_white.png');
+    background-image: url('../images/sep_white.png');
     padding-top: 50px;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@ hr {
 }
 
 .sep_grey_top {
-    background-image: url('/assets/images/sep_grey.png');
+    background-image: url('../images/sep_grey.png');
     padding-top: 50px;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ hr {
 }
 
 .sep_from_white {
-    background-image: url('/assets/images/sep_white.png');
+    background-image: url('../images/sep_white.png');
     padding-top: 50px;
     background-color: transparent;
     background-repeat: no-repeat;
