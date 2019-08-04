@@ -3,8 +3,6 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Asset\Package;
-use Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -21,7 +19,8 @@ class HomeController extends AbstractController
             'icon2' => 'assets/images/fast.png',
             'icon3' => 'assets/images/euro-price-tag.png',
             'img1' => 'assets/images/f1.png',
-            'img2' => 'assets/images/f2.png'
+            'img2' => 'assets/images/f2.png',
+            'background2' => 'assets/images/facade.jpg',
         ]);
     }
 

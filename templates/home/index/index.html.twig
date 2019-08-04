@@ -1,5 +1,11 @@
 {% extends 'layouts/base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/owlcarousel/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/owlcarousel/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+{% endblock %}
+
 {% block section1 %}
     <section class="jumbotron text-center" style="position: relative; background-color: transparent;">
         {% include 'home/index/sections/1.html.twig' %}
@@ -17,12 +23,56 @@
     <div class="container-fluid" style="background-color: #f4f4f4; position: relative; padding-top: 80px; padding-bottom: 80px;">
         <div class="sep_from_white d-none d-md-block"></div>
         {% include 'home/index/sections/3.html.twig' %}
-        <div class="sep_to_white d-none d-md-block"></div>
     </div>
 {% endblock %}
 
 {% block section4 %}
-    <div class="container-fluid" style="position: relative; height: 500px;">
+    <div class="container-fluid background_header" style="position: relative;padding-bottom: 80px; padding-top: 80px;{% if background is defined %}background-image: url({{ background }});{% endif %}">
+        <div class="sep_from_grey_to_transparent d-none d-md-block"></div>
         {% include 'home/index/sections/4.html.twig' %}
+        <div class="sep_from_transparent_to_grey d-none d-md-block"></div>
     </div>
+{% endblock %}
+
+{% block section5 %}
+    <div class="container-fluid" style="background-color: #f4f4f4; position: relative; padding-top: 80px; padding-bottom: 80px;">
+        {% include 'home/index/sections/5.html.twig' %}
+        <div class="sep_from_grey_to_red d-none d-md-block"></div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{asset('assets/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                items: 6,
+                margin: 30,
+                loop: true,
+                autoWidth: true,
+                autoplay: true,
+                autoplayTimeout: 2000
+            });
+
+          var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows : true,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          });
+
+
+        })
+    </script>
 {% endblock %}
